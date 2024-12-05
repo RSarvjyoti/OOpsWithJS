@@ -51,3 +51,26 @@ let s1 = new Student("Sarvjyoti", 89);
 s1.score = 90 // We can not able to change the value of this property (It is a private)
 s1.marks = 90 // now able to update marks with help of setter function
 console.log(s1.marks)
+
+// *********** Abstraction **********
+
+class User {
+    constructor() {
+        // Abstraction
+        if(this.constructor === User) {
+            throw new Error("Cannot Create Object");
+        }
+    }
+}
+
+// let u1 = new User(); 
+// console.log(u1); // User {} // Error("Cannot Create Object");
+
+class Employee extends User {
+    constructor() {
+        super();
+    }
+}
+
+let emp1 = new Employee(); 
+console.log(emp1); // User {}
