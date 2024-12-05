@@ -53,7 +53,7 @@ s1.marks = 90 // now able to update marks with help of setter function
 console.log(s1.marks)
 
 // *********** Abstraction **********
-
+// users will to able to create object but they can able to access the property and method is called Abstraction
 class User {
     constructor() {
         // Abstraction
@@ -74,3 +74,27 @@ class Employee extends User {
 
 let emp1 = new Employee(); 
 console.log(emp1); // User {}
+
+
+// ********* Polymorphism *********
+
+class Animal {
+    speak() {
+      console.log("Animal speaks...");
+    }
+  }
+  
+  class Dog extends Animal {
+    speak() {
+      console.log("Dog barks...");
+    }
+  }
+  
+  class Cat extends Animal {
+    speak() {
+      console.log("Cat meows...");
+    }
+  }
+  
+  const animals = [new Animal(), new Dog(), new Cat()];
+  animals.forEach(animal => animal.speak());
